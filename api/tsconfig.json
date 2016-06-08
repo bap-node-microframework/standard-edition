@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "rootDir": ".",
+        "noEmitOnError": false,
+        "sourceRoot": "",
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "noLib": false,
+        "declaration": true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "filesGlob": [
+        "app/*.ts",
+        "app/**/*.ts",
+        "typings/index.d.ts",
+        "custom_typings/main.d.ts",
+        "!node_modules/**"
+    ],
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": true,
+        "formatOnSave": true
+    },
+    "files": [
+        "app/app.ts",
+        "app/kernel.ts",
+        "app/modules/friend/controllers/friend.ts",
+        "app/modules/friend/forms/friend.ts",
+        "app/modules/friend/index.ts",
+        "app/modules/friend/models/friend.ts",
+        "app/modules/hello/controllers/hello.ts",
+        "app/modules/hello/index.ts",
+        "typings/index.d.ts",
+        "custom_typings/main.d.ts"
+    ]
+}

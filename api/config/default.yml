@@ -1,0 +1,7 @@
+log:
+    rotate:
+        frequency: daily
+    verbose: true
+    file_format: api-%DATE%.log
+    date_format: YYYYMMDD
+    skip: none
