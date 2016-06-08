@@ -22,6 +22,8 @@ App.registerPlugin(CorsPlugin, {});
 
 App.start();
 
+console.log("Server listening on http://localhost:3000...");
+
 module.exports = {
     server: App.httpServer,
     Container: Container
