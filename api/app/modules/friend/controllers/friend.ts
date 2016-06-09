@@ -1,4 +1,5 @@
-import { Get, Post, Put, Delete, WithRouter } from 'bap-node-microframework/decorators';
+import { Container } from 'bap-node-microframework/core';
+import { Get, Post, Put, Delete, WithRouter, EventListener } from 'bap-node-microframework/decorators';
 import { BaseControllerMongoose, ParamConverterMongoose } from 'bap-node-microframework-mongoose';
 import friendForm from '../forms/friend';
 
@@ -9,14 +10,16 @@ export class FriendController extends BaseControllerMongoose {
         super.cget(res, "Friend");
     }
 
+    @EventListener('api.friend.post')
     @Post('/friends', { authenticated: false })
-    addName(req, res) {
+    addFriend(req, res) {
         super.post("Friend", friendForm(req), req, res);
+        Container.get('app').emit('test', req.body.name);
     }
 
     @ParamConverterMongoose('friend', { 'model': 'Friend', 'filterBy': { 'name': 'name' } })
     @Put('/friends/:name', { authenticated: false })
-    changeFriendName(req, res) {
+    updateFriend(req, res) {
         super.put(req.params.friend, friendForm(req), req, res);
     }
 

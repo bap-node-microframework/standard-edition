@@ -1,6 +1,7 @@
 import { default as FriendRouter } from "./controllers/friend";
 import { Module, Container } from 'bap-node-microframework/core';
 import { FriendModel } from './models/friend';
+import { FriendEvents } from './events/friend';
 
 export default class FriendModule extends Module {
     registerControllers() {
@@ -9,5 +10,9 @@ export default class FriendModule extends Module {
 
     registerModels() {
         Container.registerModel('Friend', FriendModel.define(Container.get('mongoose')));
+    }
+
+    registerServices() {
+        FriendEvents.registerEventListeners(this.app);
     }
 }

@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bap-node-microframework": "git+https://github.com/bap-node-microframework/node-microframework.git",
+    "bap-node-microframework": "^0.1.6",
     "bap-node-microframework-cors": "^1.0.0",
     "bap-node-microframework-mongoose": "^1.0.0",
-    "bap-node-microframework-ping-module": "git+https://github.com/bap-node-microframework/node-microframework-ping-module.git"
+    "bap-node-microframework-ping-module": "^1.0.3"
   }
 }

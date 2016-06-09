@@ -36,6 +36,7 @@
         "app/app.ts",
         "app/kernel.ts",
         "app/modules/friend/controllers/friend.ts",
+        "app/modules/friend/events/friend.ts",
         "app/modules/friend/forms/friend.ts",
         "app/modules/friend/index.ts",
         "app/modules/friend/models/friend.ts",

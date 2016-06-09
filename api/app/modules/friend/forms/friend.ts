@@ -5,7 +5,8 @@ var validators = forms.validators;
 
 export default function friendForm(request: any) {
     let options = {
-        name: fields.string({ required: true })
+        name: fields.string({ required: true }),
+        email: fields.email()
     };
 
     return forms.create(options);
